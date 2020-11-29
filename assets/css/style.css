@@ -458,7 +458,7 @@ button {
 }
 
 .repositories .lang svg {
-  color: #4f5d95;
+  /*color: #4f5d95;*/
   font-size: 12px;
 }
 .repositories .repo a {
@@ -526,12 +526,12 @@ button {
 /*  padding-top: 102px;*/
 /*}*/
 .tab-links.sticky {
-  background-color: rgb(36, 41, 46);
+  background-color: #fff;
   /*background-color: red;*/
   margin-top: 0;
   z-index: 4;
   margin-left: 0;
-  border: 1px solid #e1e4e8 !important;
+  border-bottom: 1px solid #e1e4e8 !important;
 }
 .tab-links.sticky ul li {
   display: inline-block !important;
@@ -561,7 +561,7 @@ button {
   top: -5px;
 }
 .tab-links.sticky > div strong {
-  color: rgb(157, 165, 180) !important;
+  color: #24292e !important;
   position: absolute;
   margin-left: 7px;
   left: 67px;
@@ -692,4 +692,18 @@ button {
 }
 .after-tab-links-sm {
   display: none;
+}
+.bio {
+  margin-bottom: 20px;
+  display: block;
+  font-size: 16px;
+}
+.bio-sm {
+  display: none;
+}
+.visibility {
+  visibility: visible;
+}
+.hidden {
+  visibility: hidden;
 }

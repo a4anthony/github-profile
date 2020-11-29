@@ -6,26 +6,30 @@
 
     <title>Your Repositories</title>
     <link rel="stylesheet" href="assets/fonts/stylesheet.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/style.css?v=1">
+    <link rel="stylesheet" href="assets/css/responsive.css?v2">
     <link rel="icon" href="assets/svgs/favicon.svg" type="icon"/>
 
     <link href="assets/fontawesome/css/all.css" rel="stylesheet">
     <script defer src="assets/fontawesome/js/all.js"></script>
+    <script defer src="assets/js/moments.js"></script>
+    <script defer src="assets/js/script.js?v=1"></script>
 </head>
-<body>
+<body class="hiddenx">
 <div class="navbar">
+    <!--menu button-->
     <button class="menu-sm-btn">
         <div></div>
         <div></div>
         <div></div>
     </button>
+    <!--navbar brand-->
     <div class="navbar-brand">
-        <a href="">
-            <i class="fab fa-github"></i>
-        </a>
+        <a href=""> <i class="fab fa-github"></i> </a>
     </div>
+    <!--collapsible navbar-->
     <div class="nav-collapse">
+        <!--navbar search-->
         <div class="navbar-search">
             <form action="">
                 <div class="input-group">
@@ -38,6 +42,7 @@
                 </div>
             </form>
         </div>
+        <!--navbar quick links-->
         <div style="float: left">
             <ul class="h-list nav-links-list">
                 <li><a href="">Pull<span class="plural-pull">s</span> <span class="requests-span">requests</span></a></li>
@@ -53,14 +58,10 @@
                 <a href=""> <img src="assets/svgs/notification.svg" class="notification-icon" alt="notifications"> </a>
             </li>
             <li class="add">
-                <a href="">
-                    <img src="assets/svgs/plus.svg" class="plus-icon" alt="plus"> <span class="dropdown-toggle"> <i class="fas fa-sort-down"></i> </span>
-                </a>
+                <a href=""> <img src="assets/svgs/plus.svg" class="plus-icon" alt="plus"> <span class="dropdown-toggle"> <i class="fas fa-sort-down"></i> </span> </a>
             </li>
             <li class="profile">
-                <a href="">
-                    <img src="assets/images/avatar.jpg" class="navbar-avatar" alt="plus"> <span class="dropdown-toggle"> <i class="fas fa-sort-down"></i> </span>
-                </a>
+                <a href=""> <img src="assets/images/blank.png" class="navbar-avatar avatar-img" alt="avatar"> <span class="dropdown-toggle"> <i class="fas fa-sort-down"></i> </span> </a>
             </li>
         </ul>
     </div>
@@ -68,18 +69,14 @@
 </div>
 <div id="tabLinks" class="tab-links">
     <div>
-        <img src="assets/images/avatar.jpg" alt="plus"> <strong class="">a4anthony </strong>
+        <img src="assets/images/blank.png" class="avatar-img" alt="avater"> <strong class="">a4anthony </strong>
     </div>
     <ul class="h-list">
-        <!--<li>-->
-        <!--    <img style="width: 20px" src="assets/images/avatar.jpg" alt="plus"> <span class="">a4anthony </span>-->
-
-        <!--</li>-->
         <li>
             <a href=""><i class="fas fa-book-open"></i> Overview</a>
         </li>
         <li>
-            <a href="" class="active"><i class="fas fa-book"></i> Repositories <span class="badge">25</span></a>
+            <a href="" class="active"><i class="fas fa-book"></i> Repositories <span class="badge">0</span></a>
         </li>
         <li>
             <a href=""><i class="far fa-chart-bar"></i>Projects</a>
@@ -93,25 +90,27 @@
 <section class="main-section">
     <div class="side-tab">
         <div class="avatar" id="avatar">
-            <img src="assets/images/avatar.jpg" alt="plus"> <span class="smiley-face"> <i class="far fa-smile"></i> <a href="">Set Status</a></span> <span class="username">a4anthony</span>
+            <img src="assets/images/blank.png" class="avatar-img" alt="avatar"> <span class="smiley-face"> <i class="far fa-smile"></i> <a href="">Set Status</a></span> <span class="username">a4anthony</span>
         </div>
         <div class="account-info">
             <span class="username">a4anthony</span>
+            <span class="bio"></span>
             <button class="set-status-btn"><span> <i class="far fa-smile"></i>Set status</span></button>
+            <span class="bio bio-sm"></span>
             <button class="edit-profile-btn">Edit Profile</button>
-            <span class="blog blog-sm visible-sm-block"> <i class="fas fa-link"></i> <a href="">melaspace.com</a> </span>
+            <span class="blog blog-sm visible-sm-block"> <i class="fas fa-link"></i> <a href="" class="blog-link"></a> </span>
             <ul class="h-list account-stats">
                 <li>
-                    <a href=""> <i class="fas fa-user-friends"></i> <span style="display: inline-block"><span class="count">3</span> followers</span> </a>
+                    <a href=""> <i class="fas fa-user-friends"></i> <span style="display: inline-block"><span class="count count-followers">0</span> followers</span> </a>
                 </li>
                 <li>
-                    <a href=""> <span style="display: inline-block"><span class="count">0</span> following</span> </a>
+                    <a href=""> <span style="display: inline-block"><span class="count count-following">0</span> following</span> </a>
                 </li>
                 <li>
-                    <a href=""> <i class="far fa-star"></i> <span class="count">3</span> </a>
+                    <a href=""> <i class="far fa-star"></i> <span class="count count-stars">0</span> </a>
                 </li>
             </ul>
-            <span class="blog hidden-sm"> <i class="fas fa-link"></i> <a href="">melaspace.com</a> </span>
+            <span class="blog hidden-sm"> <i class="fas fa-link"></i> <a href="" class="blog-link"></a> </span>
         </div>
     </div>
     <div class="tab-links-sm tab-links" id="tabLinksSm">
@@ -143,110 +142,5 @@
         </div>
     </div>
 </section>
-<script>
-    const repo = [
-        "repository 1", "repository 2",
-        "repository 3", "repository 4",
-        'repository 5', 'repository 6',
-        'repository 7', 'repository 8',
-        'repository 9', 'repository 10',
-        'repository 11', 'repository 12',
-        'repository 13', 'repository 14',
-        'repository 15', 'repository 16',
-        'repository 17'
-    ];
-    repo.forEach(function (el, index) {
-        const div = document.createElement("div");
-        const divRepo = document.createElement("div");
-        divRepo.classList = 'repository-container';
-        div.className = "repo";
-        div.id = 'repo' + index
-        div.innerHTML = '<div class="repo-description"><a href="/">' + el + '</a></div>' +
-            '<div class="star-chart"><button class="star-repo">' +
-            '<i class="far fa-star"></i>Star</button></div>';
-        const body = document.querySelector('.repositories')
-        const hr = document.createElement('hr')
-        // body.appendChild(div);
-
-        var ul = document.createElement('ul');
-        ul.className = 'h-list'
-        var li1 = document.createElement('li');
-        var li2 = document.createElement('li');
-        var li3 = document.createElement('li');
-        li1.className = 'lang';
-        li2.className = 'liscence';
-        li3.className = 'updated-at';
-        li1.innerHTML = '<i class="fas fa-circle"></i>PHP'
-        li2.innerHTML = '<i class="fas fa-balance-scale"></i>MIT Liscence'
-        li3.innerHTML = 'Updated 3 days ago'
-        ul.appendChild(li1);
-        ul.appendChild(li2);
-        ul.appendChild(li3);
-        divRepo.appendChild(div)
-        divRepo.appendChild(ul)
-        // body.appendChild(ul)
-        body.appendChild(divRepo);
-        body.appendChild(hr);
-
-        // const repoDiv = document.querySelector('#repo' + index)
-        // repoDiv.innerHTML = '<ul class="h-list">' +
-        //     '<li class="lang"><i class="fas fa-circle"></i>PHP</li>' +
-        //     '<li class="liscence"><img src="assets/svgs/balance.svg" alt="">MIT LISCENCE</li>' +
-        //     '<li class="updated-at">Updated 3 days ago</li>' +
-        //     '</ul>'
-
-
-    });
-
-
-    window.onscroll = function () {
-        myFunction()
-    };
-
-    var header = document.getElementById("tabLinks");
-    var headerSm = document.getElementById("tabLinksSm");
-    var sticky = header.offsetTop;
-    var stickySm = headerSm.offsetTop;
-    var avatar = document.getElementById("avatar");
-    var stickyAvatar = avatar.scrollHeight;
-    const mainTab = document.getElementById('mainTab')
-
-    function myFunction() {
-        // console.log(headerSm.scrollTop)
-        console.log(stickySm)
-        console.log(window.pageYOffset)
-        if (window.pageYOffset > sticky) {
-            header.classList.add("sticky");
-        } else {
-            header.classList.remove("sticky");
-        }
-
-        if (window.pageYOffset >= stickySm) {
-            console.log('should stick')
-            headerSm.classList.add("sticky");
-            mainTab.classList.add('sticky-set')
-
-        } else {
-            headerSm.classList.remove("sticky");
-            mainTab.classList.remove('sticky-set')
-
-        }
-        // console.log()/
-        if (window.pageYOffset > (sticky + stickyAvatar)) {
-            header.classList.add("sticky-avatar");
-        } else {
-            header.classList.remove("sticky-avatar");
-
-        }
-    }
-
-    const tabLinks = document.getElementById("tabLinks");
-    const tabLinksSm = document.getElementById("tabLinksSm");
-    tabLinksSm.innerHTML = tabLinks.innerHTML
-    const hrTabLinks = document.createElement('hr')
-    // hrTabLinks.className = 'after-tab-links';
-    // tabLinksSm.appendChild(hrTabLinks)
-    // console.log(tabLinks.innerHTML)
-</script>
 </body>
 </html>

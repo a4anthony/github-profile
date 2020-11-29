@@ -148,7 +148,7 @@
   }
   .avatar .username {
     position: absolute;
-    top: -4px;
+    top: 0;
     left: 82px;
     display: block;
   }
@@ -250,6 +250,13 @@
   }
   .blog-sm {
     margin-top: 25px;
+  }
+  .bio {
+    display: none;
+  }
+  .bio-sm {
+    display: block;
+    margin-bottom: 10px;
   }
 }
 /* Large Mobile :480px. */
