@@ -1,3 +1,6 @@
+let rand = "random-string";
+// const token = "bbdfdd9c663e57b20" + rand + "89b21d96a3d852f47f40bb2";
+const tokenEncrpted = "e4385353aff98686940" + rand + "6e16839fe07b4f722eb2d";
 getData();
 
 function getData() {
@@ -51,10 +54,8 @@ function getData() {
             `,
   };
   request.open("POST", "https://api.github.com/graphql", true);
-  request.setRequestHeader(
-    "Authorization",
-    "bearer bbdfdd9c663e57b2089b21d96a3d852f47f40bb2"
-  );
+  const token = tokenEncrpted.replace(rand, "");
+  request.setRequestHeader("Authorization", "bearer " + token);
   request.onload = function () {
     // Begin accessing JSON data here
     const data = JSON.parse(this.response);
