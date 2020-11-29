@@ -53,7 +53,7 @@ function getData() {
   request.open("POST", "https://api.github.com/graphql", true);
   request.setRequestHeader(
     "Authorization",
-    "bearer ffb19f8750ed1ec7ad4defa8f286132f5e881881"
+    "bearer c393872bce46727e6af42134f0440dc05d0be1d3"
   );
   request.onload = function () {
     // Begin accessing JSON data here
