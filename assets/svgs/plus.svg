@@ -2,6 +2,9 @@
      xmlns="http://www.w3.org/2000/svg">
     <style>
         path {
+            fill: #ffff;
+        }
+        path:hover {
             fill: rgb(134, 132, 132);
         }
     </style>

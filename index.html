@@ -12,7 +12,6 @@
 
     <link href="assets/fontawesome/css/all.css" rel="stylesheet">
     <script defer src="assets/fontawesome/js/all.js"></script>
-    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js" integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw==" crossorigin="anonymous"></script>-->
 </head>
 <body>
 <div class="navbar">
@@ -22,7 +21,9 @@
         <div></div>
     </button>
     <div class="navbar-brand">
-        <a href=""> <img src="assets/svgs/logo.svg" alt="Github Logo"> </a>
+        <a href="">
+            <i class="fab fa-github"></i>
+        </a>
     </div>
     <div class="nav-collapse">
         <div class="navbar-search">
@@ -52,10 +53,14 @@
                 <a href=""> <img src="assets/svgs/notification.svg" class="notification-icon" alt="notifications"> </a>
             </li>
             <li class="add">
-                <img src="assets/svgs/plus.svg" class="plus-icon" alt="plus"> <span class="dropdown-toggle"> <i class="fas fa-sort-down"></i> </span>
+                <a href="">
+                    <img src="assets/svgs/plus.svg" class="plus-icon" alt="plus"> <span class="dropdown-toggle"> <i class="fas fa-sort-down"></i> </span>
+                </a>
             </li>
             <li class="profile">
-                <img src="assets/images/avatar.jpg" class="navbar-avatar" alt="plus"> <span class="dropdown-toggle"> <i class="fas fa-sort-down"></i> </span>
+                <a href="">
+                    <img src="assets/images/avatar.jpg" class="navbar-avatar" alt="plus"> <span class="dropdown-toggle"> <i class="fas fa-sort-down"></i> </span>
+                </a>
             </li>
         </ul>
     </div>
@@ -111,6 +116,7 @@
     </div>
     <div class="tab-links-sm tab-links" id="tabLinksSm">
     </div>
+    <hr class="after-tab-links-sm">
     <div id="mainTab" class="main-tab">
         <div class="filters">
             <form action="" style="display: flex; width: 100%">
@@ -237,6 +243,9 @@
     const tabLinks = document.getElementById("tabLinks");
     const tabLinksSm = document.getElementById("tabLinksSm");
     tabLinksSm.innerHTML = tabLinks.innerHTML
+    const hrTabLinks = document.createElement('hr')
+    // hrTabLinks.className = 'after-tab-links';
+    // tabLinksSm.appendChild(hrTabLinks)
     // console.log(tabLinks.innerHTML)
 </script>
 </body>
