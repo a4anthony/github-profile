@@ -1,7 +1,7 @@
 let rand = "random-string";
-// const token = "bbdfdd9c663e57b20" + rand + "89b21d96a3d852f47f40bb2";
 const tokenEncrpted = "e4385353aff98686940" + rand + "6e16839fe07b4f722eb2d";
-getData();
+
+getData(); //get data from api
 
 function getData() {
   const request = new XMLHttpRequest();
@@ -29,6 +29,7 @@ function getData() {
                             }
                           }
                            url
+                           isPrivate
                         }
                       }
                       totalCount
@@ -87,23 +88,28 @@ function setRepositories(repos) {
     divRepo.classList = "repository-container";
     div.className = "repo";
     div.id = "repo" + index;
+    let privateSpan = "";
+    if (el.node.isPrivate) {
+      privateSpan = "<span class='private-repo'>Private</span>";
+    }
     div.innerHTML =
       '<div class="repo-description"><a href="' +
       el.node.url +
       '">' +
       el.node.name +
-      "</a></div>" +
+      "</a>" +
+      privateSpan +
+      "</div>" +
       '<div class="star-chart"><button class="star-repo">' +
       '<i class="far fa-star"></i>Star</button></div>';
     const body = document.querySelector(".repositories");
     const hr = document.createElement("hr");
-    // body.appendChild(div);
 
-    var ul = document.createElement("ul");
+    const ul = document.createElement("ul");
     ul.className = "h-list";
-    var li1 = document.createElement("li");
-    var li2 = document.createElement("li");
-    var li3 = document.createElement("li");
+    const li1 = document.createElement("li");
+    const li2 = document.createElement("li");
+    const li3 = document.createElement("li");
     li1.className = "lang";
     li2.className = "liscence";
     li3.className = "updated-at";
@@ -132,6 +138,7 @@ function setRepositories(repos) {
   });
 }
 
+// set account info
 function setAccountInfo(user, followingCount, followersCount) {
   console.log(user);
   const avatars = document.querySelectorAll(".avatar-img");
@@ -156,21 +163,18 @@ function setAccountInfo(user, followingCount, followersCount) {
 }
 
 window.onscroll = function () {
-  myFunction();
+  scrollEvent();
 };
 
-var header = document.getElementById("tabLinks");
-var headerSm = document.getElementById("tabLinksSm");
-var sticky = header.offsetTop;
-var stickySm = headerSm.offsetTop;
-var avatar = document.getElementById("avatar");
-var stickyAvatar = avatar.scrollHeight;
+const header = document.getElementById("tabLinks");
+const headerSm = document.getElementById("tabLinksSm");
+const sticky = header.offsetTop;
+const stickySm = headerSm.offsetTop;
+const avatar = document.getElementById("avatar");
+const stickyAvatar = avatar.scrollHeight;
 const mainTab = document.getElementById("mainTab");
 
-function myFunction() {
-  // console.log(headerSm.scrollTop)
-  console.log(stickySm);
-  console.log(window.pageYOffset);
+function scrollEvent() {
   if (window.pageYOffset > sticky) {
     header.classList.add("sticky");
   } else {
@@ -185,7 +189,6 @@ function myFunction() {
     headerSm.classList.remove("sticky");
     mainTab.classList.remove("sticky-set");
   }
-  // console.log()/
   if (window.pageYOffset > sticky + stickyAvatar) {
     header.classList.add("sticky-avatar");
   } else {

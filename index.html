@@ -10,12 +10,17 @@
     <link rel="stylesheet" href="assets/css/responsive.css?v2">
     <link rel="icon" href="assets/svgs/favicon.svg" type="icon"/>
 
+    <!--fontawesome-->
     <link href="assets/fontawesome/css/all.css" rel="stylesheet">
     <script defer src="assets/fontawesome/js/all.js"></script>
+
+    <!--moments js-->
     <script defer src="assets/js/moments.js"></script>
+
     <script defer src="assets/js/script.js?v=1"></script>
 </head>
-<body class="hiddenx">
+<body>
+<!--navbar-->
 <div class="navbar">
     <!--menu button-->
     <button class="menu-sm-btn">
@@ -42,8 +47,8 @@
                 </div>
             </form>
         </div>
-        <!--navbar quick links-->
-        <div style="float: left">
+        <!--navbar  links-->
+        <div class="float-left">
             <ul class="h-list nav-links-list">
                 <li><a href="">Pull<span class="plural-pull">s</span> <span class="requests-span">requests</span></a></li>
                 <li><a href="">Issues</a></li>
@@ -52,7 +57,8 @@
             </ul>
         </div>
     </div>
-    <div style="float: right">
+    <!--navbar quick links-->
+    <div class="float-right">
         <ul class="h-list nav-quick-links">
             <li class="alert">
                 <a href=""> <img src="assets/svgs/notification.svg" class="notification-icon" alt="notifications"> </a>
@@ -65,8 +71,8 @@
             </li>
         </ul>
     </div>
-
 </div>
+<!--tab links-->
 <div id="tabLinks" class="tab-links">
     <div>
         <img src="assets/images/blank.png" class="avatar-img" alt="avater"> <strong class="">a4anthony </strong>
@@ -88,13 +94,13 @@
 </div>
 <hr class="hidden-sm">
 <section class="main-section">
+    <!--side tab-->
     <div class="side-tab">
         <div class="avatar" id="avatar">
             <img src="assets/images/blank.png" class="avatar-img" alt="avatar"> <span class="smiley-face"> <i class="far fa-smile"></i> <a href="">Set Status</a></span> <span class="username">a4anthony</span>
         </div>
         <div class="account-info">
-            <span class="username">a4anthony</span>
-            <span class="bio"></span>
+            <span class="username">a4anthony</span> <span class="bio"></span>
             <button class="set-status-btn"><span> <i class="far fa-smile"></i>Set status</span></button>
             <span class="bio bio-sm"></span>
             <button class="edit-profile-btn">Edit Profile</button>
@@ -113,14 +119,16 @@
             <span class="blog hidden-sm"> <i class="fas fa-link"></i> <a href="" class="blog-link"></a> </span>
         </div>
     </div>
+    <!--tab links on smaller devices-->
     <div class="tab-links-sm tab-links" id="tabLinksSm">
     </div>
     <hr class="after-tab-links-sm">
+    <!--main tab-->
     <div id="mainTab" class="main-tab">
         <div class="filters">
-            <form action="" style="display: flex; width: 100%">
+            <form action="">
                 <div class="filter-search">
-                    <input type="text" placeholder="Find a repository...">
+                    <label for="query-repo"></label> <input type="text" id="query-repo" placeholder="Find a repository...">
                 </div>
                 <div class="filter-buttons" style="display: flex">
                     <button>
@@ -136,11 +144,60 @@
             </form>
         </div>
         <hr>
-        <!--<canvas id="myChart" width="400" height="400"></canvas>-->
+        <!--repositories-->
         <div class="repositories">
             <!--repositories-->
         </div>
     </div>
+</section>
+<!--footer-->
+<section class="main-section footer-section">
+    <hr>
+    <footer class="footer">
+        <div>
+            <ul class="h-list">
+                <li>
+                    <a href="" class="logo"> <i class="fab fa-github"></i> </a>
+                </li>
+                <li>
+                    <a href="" class="copyright">© 2020 GitHub, Inc.</a>
+                </li>
+                <li>
+                    <a href="">Terms</a>
+                </li>
+                <li>
+                    <a href="">Privacy</a>
+                </li>
+                <li>
+                    <a href="">Security</a>
+                </li>
+                <li>
+                    <a href="">Status</a>
+                </li>
+                <li>
+                    <a href="">Help</a>
+                </li>
+                <li>
+                    <a href="">Contact Github</a>
+                </li>
+                <li>
+                    <a href="">Pricing</a>
+                </li>
+                <li>
+                    <a href="">Api</a>
+                </li>
+                <li>
+                    <a href="">Training</a>
+                </li>
+                <li>
+                    <a href="">Blog</a>
+                </li>
+                <li>
+                    <a href="">About</a>
+                </li>
+            </ul>
+        </div>
+    </footer>
 </section>
 </body>
 </html>
